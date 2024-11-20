@@ -1,0 +1,435 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    padding: 1.5rem 7%;
+    background-color: burlywood;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    z-index: 100;
+}
+.logo img{
+    width: 80px;
+    border-radius: 10px;
+}
+header nav a{
+    color: black;
+    font-size: 20px;
+    margin: 1rem;
+    padding: 0.5rem;
+    position: relative;
+
+}
+header nav a:hover{
+    color: rgb(90, 86, 79);
+}
+header nav a::after{
+    content: "";
+    background-color: rgb(121, 102, 78);
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    /* margin-top: 5px; */
+
+}
+header nav a:hover::after{
+    width: 100%;
+    background-color: rgb(121, 102, 78);
+    transition:  all 0.5s;
+}
+.icons{
+    display: flex;
+    align-items: center;
+}
+.icons #bar{
+    color: black;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+.icons #bar:hover{
+    color: blanchedalmond;
+}
+.order-now{
+    padding: 1rem 2.5rem;
+    color: black;
+    font-size: 20px;
+    border: 2px solid rgb(117, 79, 29);
+    background-color: transparent;
+    border-radius: 5px;
+    margin: 1rem;
+}
+.order-now:hover{
+    border-radius: 5px;
+    border: 1px solid rgb(90, 32, 32);
+    cursor: pointer;
+    color: rgb(124, 92, 49);
+}
+nav.active{
+    clip-path: polygon(0 0 , 100% 0, 100% 0, 0 0);
+}
+
+
+.hero{
+    
+    background-image: url(https://static.vecteezy.com/system/resources/previews/024/579/747/large_2x/coffee-cup-and-coffee-beans-on-a-wooden-table-dark-background-a-cup-of-hot-dark-coffee-with-aromatic-roasted-coffee-beans-on-top-ai-generated-free-photo.jpg);
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 7%;
+    background-size: cover;
+}
+.hero-content{
+    margin-top: 100px;
+}
+.hero-content h1{
+    font-size: 60px;
+    color: white;
+}
+.hero-content p{
+    font-size: 2rem;
+    color: rgb(145, 138, 138);
+}
+.hero-button button{
+    margin-top: 2rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-right: 1.5rem;
+    
+
+}
+.hero-button .firstbtn{
+    background-color: bisque;
+    color: black;
+    border: 1px solid rgb(0, 0, 0);
+    transition: all 0.5s;
+    text-transform: uppercase;
+}
+.hero-button .secbtn{
+    background: transparent;
+    color: rgb(245, 232, 232);
+    border: 1px solid rgb(88, 85, 85);
+    transition: all 0.5s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+.hero-button .secbtn:hover{
+    background-color: bisque;
+    color: black;
+}
+
+.Flavor{
+    padding: 7%;
+    background-color: rgb(83, 75, 67);
+}
+.Flavor h1{
+    font-size: 60px;
+    font-weight: 400;
+    text-align: center;
+    margin: 2rem;
+    color: rgb(255, 234, 234);
+}
+.Flavor h1 span{
+    color: rgb(48, 42, 42);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.main-flav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.main-flav .inner-flav{
+    flex: 1 1 300px;
+}
+.main-flav .inner-flav img{
+    width: 100%;
+    border: 2px solid rgb(83, 75, 67);
+    position: relative;
+}
+/* .main-flav .inner-flav img::after{
+    content: "";
+    background-color: beige;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index: 22;
+} */
+
+.main-flav .inner-flav span{
+    background-color: beige;
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 6px;
+    left: 0;
+    margin: auto 0;
+}
+.main-flav .inner-flav:hover span{
+    width: 99%;;
+}
+.inner-flav{
+    position: relative;
+}
+.flav-content{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    z-index: 1;
+}
+.flav-content h2{
+    color: rgb(75, 66, 66);
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+.flav-content p{
+    color: rgb(85, 43, 43);
+    font-size: 15px;
+}
+
+.main-about{
+    background: url(https://i3.wp.com/wallpapers.com/images/hd/high-resolution-wood-background-sk0k1ko8b0lxyyf4.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding: 1.5rem 7%;
+    height: 100vh;
+    /* background-color: pink; */
+    
+}
+.main-inner-about h1{
+    font-size: 45px;
+    text-align: center;
+    color: rgb(94, 90, 85);
+}
+.about-main-content{
+    display: flex;
+    /* align-items: center;
+    justify-content: space-between; */
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.about-inner-content img{
+    width: 100%;
+    padding: 3rem;
+    border-radius: 4px;
+}
+.about-inner-content{
+    flex: 1 2 45rem;
+}
+.about-inner-content h3{
+    margin-top: 30px;
+    padding: 2rem;
+    color: rgb(5, 5, 5);
+    background-color: antiquewhite;
+    letter-spacing: 2px;
+    font-size: 15px;
+    display: inline-block;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+.about-inner-content h1{
+    font-size: 45px;
+    color: bisque;
+
+}
+.about-inner-content p{
+    color: white;
+    font-size: 1.5rem;
+    margin: 3rem 0;
+    font-family: var(--font-jost);
+}
+.our-gallery{
+    padding: 2rem 9%;
+    background-color: rgb(179, 159, 135);
+}
+.our-gallery h1{
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    padding: 3rem 0;
+}
+.our-gallery h1 span{
+    color: rgb(63, 40, 9);
+}
+.main-gallary{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.gallary-inner-content{
+    flex: 1 1 500px;
+    position: relative;
+    overflow: hidden;
+}
+.gallary-inner-content img{
+    width: 100%;
+    border: 1px solid rgb(179, 159, 135);
+    border-radius: 15px;
+}
+.gallary-inner-content .gellary-icons{
+    position: absolute;
+    top: 10%;
+    left: -100%;
+    transition: all 0.5s;
+}
+.gallary-inner-content:hover .gellary-icons{
+    left: 10%;
+    cursor: pointer;
+}
+.gallary-inner-content .gellary-icons i{
+    color: rgb(116, 105, 92);
+    font-size: 18px;
+    margin: 0 0.5rem;
+    padding: 1rem;
+    border: 1px solid rgb(163, 124, 124);
+}
+.gallary-inner-content .gellary-icons i:hover{
+    color: red;
+    border: 1px solid rgb(95, 7, 7);
+}
+.customer-review{
+    padding: 2rem 9%;
+    background-color: rgb(136, 136, 98);
+}
+.customer-review h1{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    padding: 3rem 0;
+}
+.customer-review h1 span{
+    color: blanchedalmond;
+}
+.main-customer-review{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.inner-customer-content{
+    flex: 1 1 300px;
+    border: 2px solid rgb(116, 102, 84);
+    padding: 10px;
+    text-align: center;
+}
+.inner-customer-content img{
+    width: 100px;
+    border-radius: 100%;
+}
+.customer-text{
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+.customer-stars{
+    color: bisque;
+    font-size: 15px;
+}
+.contactus{
+    padding: 4rem 9%;
+    background-color: blanchedalmond;
+}
+.contactus h2{
+    text-align: center;
+    font-size: 30px;
+    margin: 2rem 0;
+}
+.contactus h2 span{
+    color: rgb(114, 74, 33);
+}
+.main-contact{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.inner-contact{
+    flex: 1 1 45rem;
+}
+.inner-contact img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px){
+    header{
+        padding: 2rem;
+    }
+    nav{
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        height: 100vh;
+        background-color: burlywood;
+        left: 0;
+        
+        /* clip-path: polygon(0 0 , 100% 0, 100% 0, 0 0); */
+    }
+    nav a{
+        display: block;
+        margin: 1.5rem;
+        padding: 29px;
+        font-size: 20px;
+        background-color: rgb(190, 177, 177);
+        border-radius: 5px;
+        border: 1px solid rgb(168, 164, 164);
+    }
+    .icons #bar{
+        display: initial;
+    }
+
+    .hero{
+        padding: 2rem;
+    }
+    .hero-content h1{
+        font-size: 60px;
+        margin-top: 120px;
+    }
+}
+
